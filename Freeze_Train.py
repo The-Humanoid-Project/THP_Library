@@ -13,7 +13,7 @@ def main():
     for epochs in epochs_list:
         for learning_rate in learning_rate_list:
             for weight_decay in weight_decay_list:
-                command = f"yolo train data={dataset} model={model} freeze={0} epochs={epochs} lr0={learning_rate} weight_decay={weight_decay} batch_size=8"
+                command = f"yolo train data={dataset} model={model} freeze={0} epochs={epochs} lr0={learning_rate} weight_decay={weight_decay} batch=8"
                 subprocess.run(command, shell=True)
 
 if __name__ == '__main__':
