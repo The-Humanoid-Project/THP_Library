@@ -12,7 +12,7 @@ def main():
     #################################
     # Define the last completed run #
     #################################
-    last_completed_run = 11
+    last_completed_run = 4
 
     # Iterate through all possible combinations
     for epochs in epochs_list:
