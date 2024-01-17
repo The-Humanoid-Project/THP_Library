@@ -18,7 +18,7 @@ def main():
 
 if __name__ == '__main__':
     # Add freeze_support() for Windows multiprocessing support
-    multiprocessing.freeze_support()
+    #multiprocessing.freeze_support()
 
     # Execute main function
     main()

@@ -3,7 +3,7 @@ import multiprocessing
 
 def main():
     # Load a model
-    model = YOLO('D:\\Code\\THP_Library\\runs\\detect\\train23\\weights\\last.pt')  # load a partially trained model
+    model = YOLO('D:\\Code\\THP_Library\\runs\\detect\\train30\\weights\\last.pt')  # load a partially trained model
 
     # Resume training
     results = model.train(resume=True)

@@ -12,7 +12,7 @@ def main():
     #################################
     # Define the last completed run #
     #################################
-    last_completed_run = 23
+    last_completed_run = 3
 
     # Iterate through all possible combinations
     for epochs in epochs_list:
@@ -34,7 +34,7 @@ def main():
 
 if __name__ == '__main__':
     # Add freeze_support() for Windows multiprocessing support
-    multiprocessing.freeze_support()
+    #multiprocessing.freeze_support()
 
     # Execute main function
     main()
