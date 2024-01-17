@@ -26,7 +26,7 @@ def main():
                     continue
 
                 # Construct the command
-                command = f"yolo train data={dataset} model={model} freeze={10} epochs={epochs} lr0={learning_rate} weight_decay={weight_decay}"
+                command = f"yolo train data={dataset} model={model} freeze={0} epochs={epochs} lr0={learning_rate} weight_decay={weight_decay} batch_size=8"
 
                 # Run the command
                 print(f"Running {command}")
