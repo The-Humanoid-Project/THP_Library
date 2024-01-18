@@ -12,7 +12,7 @@ def main():
     #################################
     # Define the last completed run #
     #################################
-    last_completed_run = 4
+    last_completed_run = 5
 
     # Iterate through all possible combinations
     for epochs in epochs_list:
@@ -26,7 +26,7 @@ def main():
                     continue
 
                 # Construct the command
-                command = f"yolo train data={dataset} model={model} freeze={10} epochs={epochs} lr0={learning_rate} weight_decay={weight_decay} batch=8"
+                command = f"yolo train data={dataset} model={model} freeze={10} epochs={epochs} lr0={learning_rate} weight_decay={weight_decay} batch=4 imgsz=640 verbose=True"
 
                 # Run the command
                 print(f"Running {command}")
