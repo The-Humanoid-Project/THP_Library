@@ -1,5 +1,5 @@
 from ultralytics import YOLO
 
-model = YOLO("FullyRetrain_Best.pt")
+model = YOLO("Freeze_Best.pt")
 
-model.export(format="onnx", opset=15)
+model.export(format="onnx", opset=13, dynamic=True, simplify=True)
