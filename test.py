@@ -22,10 +22,11 @@ def check_pytorch_gpu():
 
 def check_onnx_gpu():
     device = onnxruntime.get_device()
-    if device == 'CUDA':
+    print(device)
+    if device == 'GPU':
         print("ONNX GPU support is available.")
-        gpu_name = onnxruntime.get_device_name(0)
-        print(f"GPU Name: {gpu_name}")
+        gpu_name = onnxruntime.get_available_providers()
+        print(f"Available Execution Providers: {gpu_name}")
     else:
         print("ONNX GPU not found. Using CPU.")
 
