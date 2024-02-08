@@ -1,7 +1,6 @@
-import cv2
 import os
+import cv2
 from ultralytics import YOLO
-from PIL import Image
 
 # Function to find the latest image index in a directory
 def find_latest_image_index(directory):
@@ -23,15 +22,15 @@ book_count = find_latest_image_index("inferencing/Books")
 Model = "Models\\train_scratch_v2x.pt"
 
 # Function to Capture and Save Images
-def capture_image(camera_index=0, target_resolution=(1280, 720)):
+def capture_image(camera_index=0, target_resolution=(1920, 1080)):
     global captured_image_count
     try:
         cap = cv2.VideoCapture(camera_index)
         if not cap.isOpened():
             print("Error: Could not open camera.")
             return None
-        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 10000)
-        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 10000)
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 2592)
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1944)
         while True:
             # Read a frame from the camera
             ret, frame = cap.read()
